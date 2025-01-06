@@ -44,6 +44,12 @@
           "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
           "recordAudioAndroid": true
         }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "La app necesita acceder a tu ubicación."
+        }
       ]
     ],
     "extra": {

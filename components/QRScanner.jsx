@@ -30,6 +30,12 @@ export default function QRScanner() {
         try {
             setIsLoading(true);
 
+            const { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== 'granted') {
+                Alert.alert('Error', 'Se requieren permisos de ubicación');
+                return false;
+            }
+
             const accessToken = await AsyncStorage.getItem("accessToken");
             if (!accessToken) {
                 Alert.alert("Error", "No se encontró el token de usuario");
