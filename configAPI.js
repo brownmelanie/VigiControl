@@ -1,0 +1,1 @@
+export const API_URL = 'https://software.ansaseguridad.com.ar/secbutton-api';
